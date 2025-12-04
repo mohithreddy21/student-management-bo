@@ -1,0 +1,132 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'StudentID'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'StudentID'
+annotate view ZC_STUDENTS_DB with
+{
+  @EndUserText.label: 'StudentID'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'StudentID'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'StudentID'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  StudentID;
+  
+  @EndUserText.label: 'Full name'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'FullName'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'FullName'
+  } ]
+  FullName;
+  
+  @EndUserText.label: 'Age'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Age'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'Age'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  Age;
+  
+  @EndUserText.label: 'Branch'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Branch'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'Branch'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  Branch;
+  
+  @EndUserText.label: 'Email'
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Email'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'Email'
+  } ]
+  Email;
+  
+  @EndUserText.label: 'PhoneNumber'
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'PhoneNumber'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'PhoneNumber'
+  } ]
+  PhoneNumber;
+  
+  @EndUserText.label: 'Cgpa'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Cgpa'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Cgpa'
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  Cgpa;
+  
+  @UI.hidden: true
+  LocalCreatedBy;
+  
+  @UI.hidden: true
+  LocalCreatedAt;
+  
+  @UI.hidden: true
+  LocalLastChangedBy;
+  
+  @UI.hidden: true
+  LocalLastChangedAt;
+  
+  @UI.hidden: true
+  LastChangedAt;
+  
+  @EndUserText.label: '_BaseEntity'
+  @UI.identification: [ {
+    position: 130 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.lineItem: [ {
+    position: 130 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.selectionField: [ {
+    position: 130 
+  } ]
+  _BaseEntity;
+}

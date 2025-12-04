@@ -1,0 +1,11 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "SAP Object Node Type ZSTUDENTS_DB",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "name": "ZSTUDENTS_DB",
+  "sapObjectType": "ZSTUDENTS_DB",
+  "rootNode": true
+}
