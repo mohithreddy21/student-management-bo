@@ -1,0 +1,71 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Branch'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Branch'
+annotate view ZC_BRANCHES with
+{
+  @EndUserText.label: 'Branch'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Branch'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'Branch'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  Branch;
+  
+  @EndUserText.label: 'Branchtext'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Branchtext'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'Branchtext'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  Branchtext;
+  
+  @UI.hidden: true
+  LocalCreatedBy;
+  
+  @UI.hidden: true
+  LocalCreatedAt;
+  
+  @UI.hidden: true
+  LocalLastChangedBy;
+  
+  @UI.hidden: true
+  LocalLastChangedAt;
+  
+  @UI.hidden: true
+  LastChangedAt;
+  
+  @EndUserText.label: '_BaseEntity'
+  @UI.identification: [ {
+    position: 80 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  _BaseEntity;
+}

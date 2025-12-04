@@ -1,42 +1,48 @@
 @Metadata.allowExtensions: true
 @Metadata.ignorePropagatedAnnotations: true
-@Endusertext: {
-  Label: '###GENERATED Core Data Service Entity'
+@EndUserText: {
+  label: '###GENERATED Core Data Service Entity'
 }
-@Objectmodel: {
-  Sapobjectnodetype.Name: 'ZSTUDENTS_DB'
+@ObjectModel: {
+  sapObjectNodeType.name: 'ZSTUDENTS_DB'
 }
 @AccessControl.authorizationCheck: #MANDATORY
 define root view entity ZC_STUDENTS_DB
-  provider contract TRANSACTIONAL_QUERY
+  provider contract transactional_query
   as projection on ZR_STUDENTS_DB
-  association [1..1] to ZR_STUDENTS_DB as _BaseEntity on $projection.STUDENTID = _BaseEntity.STUDENTID
+  association [1..1] to ZR_STUDENTS_DB as _BaseEntity on $projection.StudentID = _BaseEntity.StudentID
 {
   key StudentID,
   FullName,
   Age,
+  @Consumption.valueHelpDefinition: [{
+      entity: {
+        name: 'ZVH_BRANCH',
+        element: 'Branch'
+      }
+  } ]
   Branch,
   Email,
   PhoneNumber,
   Cgpa,
   @Semantics: {
-    User.Createdby: true
+    user.createdBy: true
   }
   LocalCreatedBy,
   @Semantics: {
-    Systemdatetime.Createdat: true
+    systemDateTime.createdAt: true
   }
   LocalCreatedAt,
   @Semantics: {
-    User.Localinstancelastchangedby: true
+    user.localInstanceLastChangedBy: true
   }
   LocalLastChangedBy,
   @Semantics: {
-    Systemdatetime.Localinstancelastchangedat: true
+    systemDateTime.localInstanceLastChangedAt: true
   }
   LocalLastChangedAt,
   @Semantics: {
-    Systemdatetime.Lastchangedat: true
+    systemDateTime.lastChangedAt: true
   }
   LastChangedAt,
   _BaseEntity
